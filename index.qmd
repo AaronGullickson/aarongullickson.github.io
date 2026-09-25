@@ -30,9 +30,44 @@ about:
 
 ---
 
+```{r}
+#| label: setup
+#| include: false
+
+library(tibble)
+library(dplyr)
+library(stringr)
+library(lubridate)
+library(glue)
+```
+
 My name is Aaron Gullickson. I am a Professor of [Sociology](https://sociology.uoregon.edu/) at the [University of Oregon](https://www.uoregon.edu/). I am also a demographer by training, a total data science nerd, a [git](https://git-scm.com/) evangelist, and an open science advocate. 
 
 Most of my empirical work uses large scale census and survey data to look at issues of race mixing or racial ambiguity. I examine racial classification, identification, interracial marriage, and life outcomes by race. More recently, I have begun studying religious identity as well, particularly among the growing number of people with no formal religious affiliation. Since I started using git to track my research projects, all of my research projects are available publicly as git repositories on [GitHub](https://github.com/AaronGullickson).
 
 I am trained in a variety of statistical programs, but I almost exclusively use [R](https://www.r-project.org/) in my work these days. In addition to my research, I teach a first-year graduate sequence in statistics that focuses heavily on the practical issues of data analysis. I also teach courses for [Statistical Horizons](https://statisticalhorizons.com/) on [incorporating git and Github into your research workflow](https://statisticalhorizons.com/seminars/version-control-data-analysis-github/) and on using Quarto to write code, papers, and everything else.
 
+## Recent Publications
+
+```{r}
+#| label: recent-pubs
+#| results: asis
+#| echo: false
+#| message: false
+#| error: false
+#| warning: false
+
+data_location = "https://docs.google.com/spreadsheets/d/1scjvE65qm5YXS-JG4-CRPiLEqsz6p4y34WX6ipEct_w/edit#gid=917338460"
+googlesheets4::gs4_deauth() 
+
+# get all articles published within the last year
+articles_recent <- googlesheets4::read_sheet(data_location, sheet = "entries", 
+                                     skip = 1, col_types = "c") |>
+  filter(section == "academic_articles",
+         !str_detect(where, "Forthcoming")) |>
+  filter((year(Sys.Date()) - as.numeric(when)) <= 4) |>
+  arrange(desc(when))
+
+articles_recent |>
+      glue_data("- **{what}**. {when}. {where}  ({with})\\n")
+```

@@ -17,11 +17,12 @@ a:hover {
     text-decoration: none;
 }
 
-/* CV-related */
-
-.cv strong a {
+/* allow bolding in links */
+strong a {
     font-weight: inherit;
 }
+
+/* CV-related */
 
 .cv p {
 	position: relative;
