@@ -7,8 +7,7 @@ website:
   title: "Aaron Gullickson"
   navbar:
     left:
-      - icon: sticky
-        text: Blog Posts
+      - text: Blog Posts
         href: posts.qmd
       - cv.qmd
       - icon: book
@@ -41,8 +40,8 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: flatly
+      dark: superhero
     toc: true
     toc-title: "Navigation"
     toc-location: right

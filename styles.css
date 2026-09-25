@@ -3,12 +3,12 @@
 /* link styling */
 a {
     border-bottom: none;
-    color: #000080;
+    /*color: #000080;*/
     text-decoration: none;
 }
 a:visited {
     border-bottom: none;
-    color: #000080;
+    /*color: #000080;*/
     text-decoration: none;
 }
 a:hover {
