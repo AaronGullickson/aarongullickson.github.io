@@ -16,6 +16,9 @@ filters:
    - latex-environment
 execute: 
   include: false
+  # don't freeze or cache or updates will not happen from sheet
+  freeze: false
+  cache: false
 commands: [makerubric]
 ---
 
