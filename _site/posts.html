@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -141,7 +141,7 @@ window.Quarto = {
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -156,18 +156,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
-<span class="menu-text">Posts</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/AaronGullickson"> <i class="bi bi-github" role="img">
+    <a class="nav-link active" href="./posts.html" aria-current="page"> <i class="bi bi-sticky" role="img">
 </i> 
-<span class="menu-text"></span></a>
+<span class="menu-text">Blog Posts</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/AaronGullickson"> <i class="bi bi-bluesky" role="img">
+  <li class="nav-item">
+    <a class="nav-link" href="https://stat-analysis.netlify.app/" target="_blank"> <i class="bi bi-book" role="img">
 </i> 
-<span class="menu-text"></span></a>
+<span class="menu-text">Statistics Analysis in Sociology</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://practical-data-analysis-r.netlify.app/" target="_blank"> <i class="bi bi-book" role="img">
+</i> 
+<span class="menu-text">Practical Data Analysis Using R</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -177,33 +178,32 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Posts</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="YW5jZXN0cnk=">ancestry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2l0">git <span class="quarto-category-count">(4)</span></div><div class="category" data-category="R2l0SHVi">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2l0aHVi">github <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aW50ZXJtYXJyaWFnZQ==">intermarriage <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFya2Rvd24=">markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9kZWxpbmc=">modeling <span class="quarto-category-count">(3)</span></div><div class="category" data-category="b3BlbiUyMHNjaWVuY2U=">open science <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(7)</span></div><div class="category" data-category="cmFjaWFsJTIwZmx1aWRpdHk=">racial fluidity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmV2aWV3JTIwcHJvY2Vzcw==">review process <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RhdHVzJTIwZXhjaGFuZ2U=">status exchange <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Posts</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 
@@ -212,66 +212,397 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1790319600000" data-listing-file-modified-sort="1790346893332" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<div class="thumbnail"><a href="./posts/post-with-code/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="0" data-categories="UiUyQ2dpdCUyQ0dpdEh1YiUyQ29wZW4lMjBzY2llbmNl" data-listing-date-sort="1628492400000" data-listing-file-modified-sort="1790355950081" data-listing-date-modified-sort="1628535803000" data-listing-reading-time-sort="13" data-listing-word-count-sort="2534">
+<div class="thumbnail"><a href="./post/first_github_repo/index.html" class="no-external">
 
-<img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image">
+<p class="card-img-top"><img loading='lazy' src="post/first_github_repo/command_line.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
+<a href="./post/first_github_repo/index.html" class="no-external">Making Your First GitHub R Project</a>
 </h3>
+<div class="listing-subtitle">
+<a href="./post/first_github_repo/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Z2l0'); return false;">git</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">GitHub</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHNjaWVuY2U='); return false;">open science</div>
 
 </div>
-<div class="delink listing-description"><a href="./posts/post-with-code/index.html" class="no-external">
-This is a post with executable code.
+<div class="delink listing-description"><a href="./post/first_github_repo/index.html" class="no-external">
+<p>Using RStudio to link an R Project to a GitHub repository</p>
 </a></div>
 </div>
 <div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
+<a href="./post/first_github_repo/index.html" class="no-external">
 <div class="listing-date">
-Sep 25, 2026
+Aug 9, 2021
 </div>
 <div class="listing-author">
-Harlow Malloc
+Aaron Gullickson
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cw==" data-listing-date-sort="1790060400000" data-listing-file-modified-sort="1790346893332" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="1" data-categories="Ug==" data-listing-date-sort="1599807600000" data-listing-file-modified-sort="1790355950076" data-listing-date-modified-sort="1599858456000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3771">
+<div class="thumbnail"><a href="./post/better-contrasts-for-ordinal-variables-in-r/index.html" class="no-external">
 
-<p class="card-img-top"><img loading='lazy' src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
+<a href="./post/better-contrasts-for-ordinal-variables-in-r/index.html" class="no-external">Better Contrasts for Ordinal Variables in R</a>
 </h3>
+<div class="listing-subtitle">
+<a href="./post/better-contrasts-for-ordinal-variables-in-r/index.html" class="no-external">Use stairstep contrasts, tell a friend</a>
+</div>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
 
 </div>
-<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
-This is the first post in a Quarto blog. Welcome!
+<div class="delink listing-description"><a href="./post/better-contrasts-for-ordinal-variables-in-r/index.html" class="no-external">
+Social scientists routinely use categorical variables in linear models. In order to do so, we must code these categorical variables into numeric quantities in some fashion.…
 </a></div>
 </div>
 <div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
+<a href="./post/better-contrasts-for-ordinal-variables-in-r/index.html" class="no-external">
 <div class="listing-date">
-Sep 22, 2026
+Sep 11, 2020
 </div>
 <div class="listing-author">
-Tristan O’Malley
+Aaron Gullickson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Ug==" data-listing-date-sort="1588748400000" data-listing-file-modified-sort="1790355950075" data-listing-date-modified-sort="1588798144000" data-listing-reading-time-sort="7" data-listing-word-count-sort="1307">
+<div class="thumbnail"><a href="./post/adding-odds-ratios-to-logit-model-output-in-r/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./post/adding-odds-ratios-to-logit-model-output-in-r/index.html" class="no-external">Adding Odds Ratios to Logit Model Output in R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./post/adding-odds-ratios-to-logit-model-output-in-r/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+</div>
+<div class="delink listing-description"><a href="./post/adding-odds-ratios-to-logit-model-output-in-r/index.html" class="no-external">
+I recently received an email from an undergraduate student who had taken my statistics course. This student was working on their undergraduate thesis project in which they…<em></em><code></code><em></em><code></code>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./post/adding-odds-ratios-to-logit-model-output-in-r/index.html" class="no-external">
+<div class="listing-date">
+May 6, 2020
+</div>
+<div class="listing-author">
+Aaron Gullickson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="b3BlbiUyMHNjaWVuY2UlMkNyZXZpZXclMjBwcm9jZXNzJTJDZ2l0aHViJTJDZ2l0" data-listing-date-sort="1525849200000" data-listing-file-modified-sort="1790355950073" data-listing-date-modified-sort="1525889838000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1002">
+<div class="thumbnail"><a href="./post/anonymous_code/index.html" class="no-external">
+
+<p class="card-img-top"><img loading='lazy' src="post/anonymous_code/view_only_example.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./post/anonymous_code/index.html" class="no-external">Providing Anonymous Code and Data to Reviewers</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./post/anonymous_code/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHNjaWVuY2U='); return false;">open science</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cmV2aWV3JTIwcHJvY2Vzcw=='); return false;">review process</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2l0aHVi'); return false;">github</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2l0'); return false;">git</div>
+
+</div>
+<div class="delink listing-description"><a href="./post/anonymous_code/index.html" class="no-external">
+<p>Because reviewers deserve open science too</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./post/anonymous_code/index.html" class="no-external">
+<div class="listing-date">
+May 9, 2018
+</div>
+<div class="listing-author">
+Aaron Gullickson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="Ug==" data-listing-date-sort="1517126400000" data-listing-file-modified-sort="1790355950072" data-listing-date-modified-sort="1517163438000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2845">
+<div class="thumbnail"><a href="./post/coding_ifelse/index.html" class="no-external">
+
+<p class="card-img-top"><img loading='lazy' src="post/coding_ifelse/trend-1.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./post/coding_ifelse/index.html" class="no-external">Re-coding Categorical Variables in R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./post/coding_ifelse/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+</div>
+<div class="delink listing-description"><a href="./post/coding_ifelse/index.html" class="no-external">
+<p>Coding categorical variables in R with the factor and ifelse command</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./post/coding_ifelse/index.html" class="no-external">
+<div class="listing-date">
+Jan 28, 2018
+</div>
+<div class="listing-author">
+Aaron Gullickson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="c3RhdHVzJTIwZXhjaGFuZ2UlMkNtb2RlbGluZw==" data-listing-date-sort="1503558000000" data-listing-file-modified-sort="1790355950059" data-listing-date-modified-sort="1586966854000" data-listing-reading-time-sort="23" data-listing-word-count-sort="4481">
+<div class="thumbnail"><a href="./post/mcclintock_response/index.html" class="no-external">
+
+<p class="card-img-top"><img loading='lazy' src="post/mcclintock_response/mcclintock_orig_table.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./post/mcclintock_response/index.html" class="no-external">Response to McClintock Response</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./post/mcclintock_response/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3RhdHVzJTIwZXhjaGFuZ2U='); return false;">status exchange</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxpbmc='); return false;">modeling</div>
+
+</div>
+<div class="delink listing-description"><a href="./post/mcclintock_response/index.html" class="no-external">
+In a 2014 article in the <em>American Sociological Review</em>, Elizabeth McClintock claimed to find little evidence of exchange of beauty for status in union formation, based on…<sup></sup>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./post/mcclintock_response/index.html" class="no-external">
+<div class="listing-date">
+Aug 24, 2017
+</div>
+<div class="listing-author">
+Aaron Gullickson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="bWFya2Rvd24lMkNS" data-listing-date-sort="1481616000000" data-listing-file-modified-sort="1790355950057" data-listing-date-modified-sort="1481653038000" data-listing-reading-time-sort="9" data-listing-word-count-sort="1614">
+<div class="thumbnail"><a href="./post/adventures_markdown/index.html" class="no-external">
+
+<p class="card-img-top"><img loading='lazy' src="post/adventures_markdown/martable1.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./post/adventures_markdown/index.html" class="no-external">Adventures in Markdown</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./post/adventures_markdown/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWFya2Rvd24='); return false;">markdown</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+</div>
+<div class="delink listing-description"><a href="./post/adventures_markdown/index.html" class="no-external">
+<p>in which I try to write a paper in R Markdown</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./post/adventures_markdown/index.html" class="no-external">
+<div class="listing-date">
+Dec 13, 2016
+</div>
+<div class="listing-author">
+Aaron Gullickson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="Z2l0" data-listing-date-sort="1475737200000" data-listing-file-modified-sort="1790355950056" data-listing-date-modified-sort="1475777838000" data-listing-reading-time-sort="3" data-listing-word-count-sort="466">
+<div class="thumbnail"><a href="./post/settingupgit/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./post/settingupgit/index.html" class="no-external">Setting Up a Git Repository</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./post/settingupgit/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2l0'); return false;">git</div>
+
+</div>
+<div class="delink listing-description"><a href="./post/settingupgit/index.html" class="no-external">
+<p>Basic instructions on setting up linked local and remote git repositories</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./post/settingupgit/index.html" class="no-external">
+<div class="listing-date">
+Oct 6, 2016
+</div>
+<div class="listing-author">
+Aaron Gullickson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="cmFjaWFsJTIwZmx1aWRpdHklMkNtb2RlbGluZyUyQ1I=" data-listing-date-sort="1472713200000" data-listing-file-modified-sort="1790355950054" data-listing-date-modified-sort="1472753838000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3635">
+<div class="thumbnail"><a href="./post/reportingerror/index.html" class="no-external">
+
+<p class="card-img-top"><img loading='lazy' src="post/reportingerror/biasbasic.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./post/reportingerror/index.html" class="no-external">Racial Fluidity, Social Status, and Measurement Error</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./post/reportingerror/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('cmFjaWFsJTIwZmx1aWRpdHk='); return false;">racial fluidity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxpbmc='); return false;">modeling</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+</div>
+<div class="delink listing-description"><a href="./post/reportingerror/index.html" class="no-external">
+<p>Some comments on the racial fluidity and measurement debate in AJS</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./post/reportingerror/index.html" class="no-external">
+<div class="listing-date">
+Sep 1, 2016
+</div>
+<div class="listing-author">
+Aaron Gullickson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="Z2l0aHViJTJDZ2l0JTJDb3BlbiUyMHNjaWVuY2UlMkNhbmNlc3RyeQ==" data-listing-date-sort="1471330800000" data-listing-file-modified-sort="1790355950053" data-listing-date-modified-sort="1471371438000" data-listing-reading-time-sort="5" data-listing-word-count-sort="970">
+<div class="thumbnail"><a href="./post/firstgithubrep/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./post/firstgithubrep/index.html" class="no-external">My First GitHub Repository</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./post/firstgithubrep/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2l0aHVi'); return false;">github</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2l0'); return false;">git</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3BlbiUyMHNjaWVuY2U='); return false;">open science</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YW5jZXN0cnk='); return false;">ancestry</div>
+
+</div>
+<div class="delink listing-description"><a href="./post/firstgithubrep/index.html" class="no-external">
+<p>in which I become and open scientist</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./post/firstgithubrep/index.html" class="no-external">
+<div class="listing-date">
+Aug 16, 2016
+</div>
+<div class="listing-author">
+Aaron Gullickson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="c3RhdHVzJTIwZXhjaGFuZ2UlMkNtb2RlbGluZyUyQ2ludGVybWFycmlhZ2UlMkNS" data-listing-date-sort="1470380400000" data-listing-file-modified-sort="1790355950051" data-listing-date-modified-sort="1470421038000" data-listing-reading-time-sort="35" data-listing-word-count-sort="6880">
+<div class="thumbnail"><a href="./post/statusexchangemodels/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./post/statusexchangemodels/index.html" class="no-external">Measuring Status Exchange</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./post/statusexchangemodels/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3RhdHVzJTIwZXhjaGFuZ2U='); return false;">status exchange</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxpbmc='); return false;">modeling</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aW50ZXJtYXJyaWFnZQ=='); return false;">intermarriage</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+</div>
+<div class="delink listing-description"><a href="./post/statusexchangemodels/index.html" class="no-external">
+<p>Code for measuring status exchange in R</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./post/statusexchangemodels/index.html" class="no-external">
+<div class="listing-date">
+Aug 5, 2016
+</div>
+<div class="listing-author">
+Aaron Gullickson
 </div>
 </a>
 </div>

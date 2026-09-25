@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Aaron Gullickson">
+<meta name="dcterms.date" content="2018-05-09">
+<meta name="description" content="Because reviewers deserve open science too">
 
-<title>Aaron Gullickson</title>
+<title>Providing Anonymous Code and Data to Reviewers – Aaron Gullickson</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,24 +32,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,17 +78,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Aaron Gullickson</span>
     </a>
   </div>
@@ -97,19 +99,8 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> <i class="bi bi-sticky" role="img">
-</i> 
-<span class="menu-text">Blog Posts</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://stat-analysis.netlify.app/" target="_blank"> <i class="bi bi-book" role="img">
-</i> 
-<span class="menu-text">Statistics Analysis in Sociology</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://practical-data-analysis-r.netlify.app/" target="_blank"> <i class="bi bi-book" role="img">
-</i> 
-<span class="menu-text">Practical Data Analysis in Sociology Using R</span></a>
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -119,52 +110,119 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Providing Anonymous Code and Data to Reviewers</h1>
+                  <div>
+        <div class="description">
+          Because reviewers deserve open science too
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">open science</div>
+                <div class="quarto-category">review process</div>
+                <div class="quarto-category">github</div>
+                <div class="quarto-category">git</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Aaron Gullickson </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 9, 2018</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">May 9, 2018</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="headshot.png" class="about-image
-  rounded " style="width: 20em;">
-<header id="title-block-header" class="quarto-title-block"></header>
-    <div class="about-links">
-  <a href="https://github.com/AaronGullickson" class="about-link" rel="" target="_blank">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-  <a href="https://bsky.app/AaronGullickson" class="about-link" rel="" target="_blank">
-    <i class="bi bi-bluesky"></i>
-     <span class="about-link-text">Bluesky</span>
-  </a>
-  <a href="https://x.com/AaronGullickson" class="about-link" rel="" target="_blank">
-    <i class="bi bi-twitter-x"></i>
-     <span class="about-link-text">X/Twitter</span>
-  </a>
-  <a href="https://orcid.org/0000-0001-7237-8131" class="about-link" rel="" target="_blank">
-     <span class="about-link-text"><i class="fa-brands fa-orcid" aria-label="orcid"></i> ORCID</span>
-  </a>
-  <a href="https://scholar.google.com/citations?user=LCTjizQAAAAJ&amp;hl=en" class="about-link" rel="" target="_blank">
-     <span class="about-link-text"><i class="fa-brands fa-google-scholar" aria-label="google-scholar"></i> Google Scholar</span>
-  </a>
-  <a href="mailto:aarong@uoregon.edu" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>My name is Aaron Gullickson. I am a Professor of <a href="https://sociology.uoregon.edu/">Sociology</a> at the <a href="https://www.uoregon.edu/">University of Oregon</a>. I am also a demographer by training, a total data science nerd, a <a href="https://git-scm.com/">git</a> evangelist, and an open science advocate.</p>
-<p>Most of my empirical work uses large scale census and survey data to look at issues of race mixing or racial ambiguity. I examine racial classification, identification, interracial marriage, and life outcomes by race. More recently, I have begun studying religious identity as well, particularly among the growing number of people with no formal religious affiliation. Since I started using git to track my research projects, all of my research projects are available publicly as git repositories on <a href="https://github.com/AaronGullickson">GitHub</a>.</p>
-<p>I am trained in a variety of statistical programs, but I almost exclusively use <a href="https://www.r-project.org/">R</a> in my work these days. In addition to my research, I teach a first-year graduate sequence in statistics that focuses heavily on the practical issues of data analysis. I also teach courses for <a href="https://statisticalhorizons.com/">Statistical Horizons</a> on <a href="https://statisticalhorizons.com/seminars/version-control-data-analysis-github/">incorporating git and Github into your research workflow</a> and on using Quarto to write code, papers, and everything else.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main></div>
+
+
+
+<p>Posting the underlying code and data for the statistical analysis in an academic paper is becoming a more common practice, although hardly universal in many disciplines. However, even when code and data are posted, it is usually made available upon publication of the paper, leaving out those who would benefit the most from access: the anonymous peer reviewers of the manuscript. Shouldn’t the people who will put your work to the most scrutiny be the ones who have full access to see exactly what you did?</p>
+<p>It is possible in some cases, of course, to just zip up your data code files and dump them in with your manuscript submission to a journal as “supplementary material.” However, the availability of this option may vary by journal and reviewers who are used to just downloading the manuscript PDF may miss your supplementary material altogether.</p>
+<p>In this post, I want to demonstrate a more elegant solution using the project framework of the <a href="https://osf.io/">Open Science Foundation</a> combined with <a href="https://github.com">GitHub</a>. I have used this procedure for my most recent manuscript submissions with great success. If you are not a git or GitHub user, you can ignore the final step I discuss here, but really <a href="../../post/firstgithubrep/index.html">you should become a git user</a>.</p>
+<section id="step-1-prepare-your-files" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-prepare-your-files">Step 1: Prepare your files</h2>
+<p>How to properly organize your data and code files for the easy accessibility of others is beyond the scope of this post, but here I want to highlight two basic minimum requirements that should be met before you make files available to reviewers:</p>
+<ol type="1">
+<li><strong>Anonymize</strong>. You are submitting these files under anonymous peer review. Therefore, you should ensure that nothing in the files can identify you. Remove all names or anything else that could identify you.</li>
+<li><strong>Provide a Guide</strong>. You need to provide some basic information that will allow readers to understand what is contained in your files. A simple README file will usually suffice. This README should explain what each of the scripts does, the order in which those scripts should be run to reproduce the analysis, and distinguish which data is from the original source and which has been constructed by the analyst. Ask yourself a simple question: Would other people be able to figure out how to replicate the analysis in these files without having me there to explain it to them? If the answer is no, then you need more documentation.</li>
+</ol>
+</section>
+<section id="step-2-set-up-an-osf-project-with-view-only-links" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-set-up-an-osf-project-with-view-only-links">Step 2: Set up an OSF Project with View-only Links</h2>
+<p>The <a href="https://osf.io">Open Science Foundation</a> provides an excellent tool for organizing research projects and disseminating information about them. You can associate manuscripts, data, and code with projects, track changes to the project, and even include a wiki. You can also link your OSF project to manuscripts on <a href="https://socopen.org/">SocArxIV</a>. <a href="https://osf.io/rcaxh/">Here is an example</a> of a project for one of my own recently published papers. If you don’t already have an account, you should create one.</p>
+<p>You can create a view-only link for any OSF project. A view-only link will open up the project page, but with all name references removed. <a href="https://osf.io/rcaxh/?view_only=65b57cc4f8d64c6db1c62bf9c2176bcb">Here is an example</a> of that same example project of mine but provided through a view-only link. Notice that contributors are listed as “Anonymous” and the person responsible for all changes to the project is listed as “user.” UPDATE: As noted by Phil Cohen on Twitter, this link provides “courtesy” anonymity, not secure anonymity. A sophisticated viewer can still access the named project page by removing the “?view_only” part of the html address.</p>
+<p>To set up a view-only link for a project, follow these steps:</p>
+<ol type="1">
+<li>Go to the project Settings tab.</li>
+<li>In the View-only Links section, click the green “+Add” button. This will bring up a dialog with more options. You must click the button to “Anonymize contributor list for this link”. If your project has multiple components, you can also decide which components to add here.</li>
+<li>Now you should see a description of your View-only Link with the option to copy the full link. Here is what mine looks like:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="view_only_example.png" class="img-fluid figure-img"></p>
+<figcaption>View only link example</figcaption>
+</figure>
 </div>
- <!-- /main -->
+<p>To make this link available to reviewers, I include the link directly in a footnote on the first page of my manuscript with instructions that reviewers can find all code and data as well as supplementary analyses at that location.</p>
+<p>But how do you get code and data into the project? You can just drag and drop your code and data files into the files section on your OSF project. However, if you use git (subliminal message: you should use git) for version control, there is a better way.</p>
+</section>
+<section id="step-3-link-osf-to-your-github-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-link-osf-to-your-github-data">Step 3: Link OSF to your GitHub data</h2>
+<p><a href="https://github.com">Github</a> (or other git platforms like <a href="https://gitlab.com">Gitlab</a>) provides an excellent tool to disseminate data and code, include documentation, and to update that code and data with a proper log of all changes. <a href="https://github.com/AaronGullickson/beautyexchange">Here is an example</a> of a GitHub repository with code for the reproduction of an analysis.</p>
+<p>Thankfully, OSF provides the ability to link to your GitHub repository. Just go to the “Add-ons” tab of your OSF project and enable the GitHub (or GitLab) settings. After authenticating with GitHub, you will then have the ability to select a repository to be associated with the project. Here is an example of what this looks like in my project:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="github_osf.png" class="img-fluid figure-img"></p>
+<figcaption>GitHub on OSF</figcaption>
+</figure>
+</div>
+<p>Once you have selected a repository, that repository will show up in the files section of your OSF project. If you make any changes to that data and code, those changes will automatically be updated on OSF once you push them to your GitHub repository. You no longer have to worry about manually moving over new files if you make a change.</p>
+<p>Importantly, you can link private repositories here as well. So if you want to keep your code and data private until publication, you can set your GitHub repo to private but still make it available to reviewers through OSF.</p>
+<p>If you are git-averse, then its worth noting that you can also link to Dropbox and OneDrive if you want to keep your data and code there instead.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

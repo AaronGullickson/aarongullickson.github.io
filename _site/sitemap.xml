@@ -1,23 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://your-website-url.example.com/post/statusexchangemodels/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/reportingerror/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/adventures_markdown/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.057Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/coding_ifelse/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.072Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/adding-odds-ratios-to-logit-model-output-in-r/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/first_github_repo/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.081Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/welcome/index.html</loc>
+    <lastmod>2026-09-25T14:34:53.332Z</lastmod>
+  </url>
+  <url>
     <loc>https://your-website-url.example.com/index.html</loc>
     <lastmod>2026-09-25T15:52:27.572Z</lastmod>
   </url>
   <url>
-    <loc>https://your-website-url.example.com/posts/post-with-code/index.html</loc>
-    <lastmod>2026-09-25T14:34:53.332Z</lastmod>
-  </url>
-  <url>
-    <loc>https://your-website-url.example.com/posts/welcome/index.html</loc>
-    <lastmod>2026-09-25T14:34:53.332Z</lastmod>
-  </url>
-  <url>
-    <loc>https://your-website-url.example.com/about.html</loc>
-    <lastmod>2026-09-25T14:34:53.332Z</lastmod>
-  </url>
-  <url>
     <loc>https://your-website-url.example.com/posts.html</loc>
-    <lastmod>2026-09-25T15:13:57.464Z</lastmod>
+    <lastmod>2026-09-25T17:23:39.587Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/post-with-code/index.html</loc>
+    <lastmod>2026-09-25T14:34:53.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/better-contrasts-for-ordinal-variables-in-r/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.076Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/anonymous_code/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.073Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/mcclintock_response/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.059Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/settingupgit/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://your-website-url.example.com/post/firstgithubrep/index.html</loc>
+    <lastmod>2026-09-25T17:05:50.053Z</lastmod>
   </url>
 </urlset>

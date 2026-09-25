@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Aaron Gullickson">
+<meta name="dcterms.date" content="2016-09-01">
+<meta name="description" content="Some comments on the racial fluidity and measurement debate in AJS">
+
+<title>Racial Fluidity, Social Status, and Measurement Error – Aaron Gullickson</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Aaron Gullickson</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Racial Fluidity, Social Status, and Measurement Error</h1>
+                  <div>
+        <div class="description">
+          Some comments on the racial fluidity and measurement debate in AJS
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">racial fluidity</div>
+                <div class="quarto-category">modeling</div>
+                <div class="quarto-category">R</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Aaron Gullickson </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 1, 2016</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">September 1, 2016</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>The most recent <a href="http://www.journals.uchicago.edu/toc/ajs/current">issue</a> of the American Journal of Sociology contains a <a href="http://www.journals.uchicago.edu/doi/full/10.1086/687374">comment</a> by Kramer, DeFina, and Hannon (KD&amp;H) on Saperstein and Penner’s (S&amp;P) <a href="http://www.socsci.uci.edu/~penner/media/2012_ajs.pdf">article</a> on racial fluidity as well as a <a href="http://www.journals.uchicago.edu/doi/full/10.1086/687806">response</a> by Saperstein and Penner (there is also <a href="http://www.journals.uchicago.edu/doi/full/10.1086/687375">another comment</a> by Richard Alba and colleagues, but the issues they raises are not the focus of this post). As a fellow co-author with Saperstein on <a href="https://sociology.stanford.edu/publications/mulatto-escape-hatch-examining-evidence-us-racial-and-social-mobility-jim-crow-era">another paper</a> looking at racial fluidity on linked Census data from the late 19th and early 20th century, I have been aware of and following the debate between these scholars for some time. Prior to the comment’s publication, Andrew Gelman <a href="http://andrewgelman.com/2016/06/07/social-problems-with-a-paper-in-social-problems/">posted</a> on the debate, and I <a href="http://andrewgelman.com/2016/06/07/social-problems-with-a-paper-in-social-problems/#comment-276828">posted</a> a comment on that post with a <a href="http://pages.uoregon.edu/aarong/reportingerror.html">link</a> to an R simulation that I had put together to show more clearly the nature of the methodological issue that forms the bulk of KD&amp;H’s criticism and how likely it might be to affect different types of models. I had largely put together the simulation for my own purposes in trying to sort out what was going on, but thought it might be useful for others to see, as well. Gelman then quoted my comment in a <a href="http://andrewgelman.com/2016/06/10/racial-classification-sociology-controversy-update/">new post</a> in which he invited Hannon to respond.</p>
+<p>So that pretty much takes us to the present. Now that the comment is published (and now that I have switched over to markdown and jekyll for posting to my website), I wanted to use this post to more clearly explain what the simulation is doing and what I think we can take from it. The post here is not intended to be a general defense or attack on any of the scholars involved. In full disclosure, I happen to be good friends with both Saperstein and Penner. However, I happen to also be a scholar interested in both racial fluidity and racial inequality and so getting this right is what I care about most. My post here is also not intended to address all of the criticisms by KD&amp;H nor the responses by S&amp;P. Interested readers should read both the comments and the response for a fuller picture of the debate.</p>
+<section id="the-models" class="level2">
+<h2 class="anchored" data-anchor-id="the-models">The Models</h2>
+<p>S&amp;P use panel data where a measurement of race is taken at multiple time points and the race response occasionally varies within individuals over time. This is the racial fluidity that S&amp;P identify. In particular, they are interested in whether this fluidity is associated with changes in social status (e.g.&nbsp;employment, occupational prestige, ever incarcerated). The fundamental insight here (and why the original article generated so much buzz) is that the causal direction of the association between race and social status may in fact run both directions, both of which serve to reinforce the racial hierarchy. S&amp;P actually have multiple papers on this topic, using different data sets and measures of social status. The AJS article uses NLSY79 data and measures social status by characteristics such as unemployment, poverty, marriage, and incarceration. However, regardless of the measure of social status, they employ two modeling approaches to look at the association. First, they run a straight regression model in which racial identification in the later period is predicted by social status in the later period <em>and</em> racial identification in the earlier period.</p>
+<p><span class="math display">\[logit(P(black_{i2}))=\beta_0+\beta_1(black_{i1})+\beta_2(status_{i2})\]</span></p>
+<p>The idea here is that we can see the effect of social status on the probability of being identified as black in time 2, even while controlling for whether the respondent was identified as black or not in time 1. Controlling for racial identification at time 1 is crucial because otherwise the association between being black in time 2 and social status in time 2 will almost certainly reflect the racial inequality (e.g.&nbsp;black people are more likely to have ever been incarcerated) rather than the racial fluidity that S&amp;P are interested in.</p>
+<p>An alternative approach uses a fixed effects panel model.</p>
+<p><span class="math display">\[logit(P(black_{it}))=\alpha_i+\beta_1(status_{it})\]</span></p>
+<p>Here the \(\) fixed effects allow S&amp;P to look at within-person change. So, \(_1\) tells you how a change in social status changes the log-odds that a person will by identified (or self-identify, depending on the measure) as black. Because the fixed effects model controls for all time constant variables, the model effectively controls for phenotypical differences (e.g.&nbsp;skin tone, hair texture) between individuals that might affect both how they identify or are identified and how they are treated.</p>
+<p>KD&amp;H’s primary criticism is that the results of S&amp;P’s analysis could easily be driven by measurement error. I feel that they are somewhat vague about the source of such measurement error (a point I will return to below as it forms a significant part of Hannon’s response on Gelman’s blog to my simulation). Lets assume for the moment that we are simply talking about either interviewers or respondents (depending on the data collection format) literally checking the wrong box relative to the box they meant to check or a transcription error when the raw data is compiled. I think everyone can agree that these situations truly would constitute measurement error as the intention of the person giving the response in that particular time and place is not accurately recorded.</p>
+<p>KD&amp;H describe a simulation in their comment which seems to show that even in the absence of real effects, a measurement error in race reporting at time 2 of 1.6% can still produce large effects of the size that S&amp;P report. S&amp;P respond by (correctly) pointing out that the simulation should allow for a similar degree of measurement error for race reporting at time 1. When S&amp;P make this correction, the effects that KD&amp;H report are roughly cut in half and substantially below most of the effects that S&amp;P report.</p>
+<p>Neither set of authors provide any real discussion of <strong>why</strong> such a large bias might be produced in the face of such a small amount of measurement error. I can be a bit thick sometimes and it was not immediately clear to me how such measurement bias was produced. So, I built the following simulation mostly to figure it out for myself. If at this point, you just want the tl;dr version, the conclusion is that measurement error could potentially create association in the basic regression model that S&amp;P run, but not the fixed-effects model, because the bias operates in the between-person comparison not the within-person comparison.</p>
+</section>
+<section id="the-simulation" class="level2">
+<h2 class="anchored" data-anchor-id="the-simulation">The Simulation</h2>
+<section id="setting-up-the-basic-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-the-basic-dataset">Setting up the basic dataset</h3>
+<p>In order to run the simulation, I first constructed a fake dataset with two time points and no fluidity. There are two groups, A and D, where D is the disadvantaged group (10% of the population). I refer to the social status characteristic as unemployment, but really it could be any dummy variable where 1 indicates a negative social status. I set the unemployment rate for A at 10% and for D at 20%. All of these parameters are adjustable and I have played around with different values. The conclusions seem pretty robust for realistic values.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sampleSize <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#two groups, A and D, for advantaged and disadvantaged. What proportion are D?</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>propD <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#base unemployment rate for A</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>baseUnempA <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#ratio of unemployment rate for D</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ratioUnemp <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>race.time1 <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"A"</span>,<span class="fu">round</span>((<span class="dv">1</span><span class="sc">-</span>propD)<span class="sc">*</span>sampleSize)),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                       <span class="fu">rep</span>(<span class="st">"D"</span>,<span class="fu">round</span>(propD<span class="sc">*</span>sampleSize))))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#because we start with no fluidity and no measurement error</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#race.time2 is identical</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>race.time2 <span class="ot">&lt;-</span> race.time1</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#assume double the unemployment rate for Ds as As (20% and 10% respectively)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>unemp.time1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>,<span class="fu">round</span>((baseUnempA)<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>propD)<span class="sc">*</span>sampleSize)),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>           <span class="fu">rep</span>(<span class="dv">0</span>,<span class="fu">round</span>((<span class="dv">1</span><span class="sc">-</span>baseUnempA)<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>propD)<span class="sc">*</span>sampleSize)),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>           <span class="fu">rep</span>(<span class="dv">1</span>,<span class="fu">round</span>((baseUnempA<span class="sc">*</span>ratioUnemp)<span class="sc">*</span>(propD)<span class="sc">*</span>sampleSize)),</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>           <span class="fu">rep</span>(<span class="dv">0</span>,<span class="fu">round</span>((<span class="dv">1</span><span class="sc">-</span>(baseUnempA<span class="sc">*</span>ratioUnemp))<span class="sc">*</span>(propD)<span class="sc">*</span>sampleSize)))</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>baseData <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(race.time2,race.time1,unemp.time1)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">#Create unemp.time2 by  randomly redistributing unemployment within each race group.</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">#This should give us the same distribution of unemployment by race in each time period</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">#and of course there can't be a correlation with switching because there is no switching</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">#in the real data.</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>baseData<span class="sc">$</span>unemp.time2 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">nrow</span>(baseData))</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> baseData<span class="sc">$</span>unemp.time1[baseData<span class="sc">$</span>race.time1<span class="sc">==</span><span class="st">"A"</span>]</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> temp[<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(temp),<span class="fu">length</span>(temp),<span class="at">replace=</span><span class="cn">FALSE</span>)]</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>baseData<span class="sc">$</span>unemp.time2[baseData<span class="sc">$</span>race.time1<span class="sc">==</span><span class="st">"A"</span>] <span class="ot">&lt;-</span> temp</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> baseData<span class="sc">$</span>unemp.time1[baseData<span class="sc">$</span>race.time1<span class="sc">==</span><span class="st">"D"</span>]</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> temp[<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(temp),<span class="fu">length</span>(temp),<span class="at">replace=</span><span class="cn">FALSE</span>)]</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>baseData<span class="sc">$</span>unemp.time2[baseData<span class="sc">$</span>race.time1<span class="sc">==</span><span class="st">"D"</span>] <span class="ot">&lt;-</span> temp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Perform some checks to make sure everything lines up as expected.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(baseData)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>##  race.time2 race.time1  unemp.time1    unemp.time2
+##  A:9000     A:9000     Min.   :0.00   Min.   :0.00
+##  D:1000     D:1000     1st Qu.:0.00   1st Qu.:0.00
+##                        Median :0.00   Median :0.00
+##                        Mean   :0.11   Mean   :0.11
+##                        3rd Qu.:0.00   3rd Qu.:0.00
+##                        Max.   :1.00   Max.   :1.00</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(baseData<span class="sc">$</span>race.time1, baseData<span class="sc">$</span>race.time2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>##
+##        A    D
+##   A 9000    0
+##   D    0 1000</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(baseData<span class="sc">$</span>unemp.time1, baseData<span class="sc">$</span>race.time1, mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>##   A   D
+## 0.1 0.2</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(baseData<span class="sc">$</span>unemp.time2, baseData<span class="sc">$</span>race.time2, mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>##   A   D
+## 0.1 0.2</code></pre>
+</section>
+<section id="introducing-measurement-error" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-measurement-error">Introducing measurement error</h3>
+<p>Now, I set up a monte carlo simulation in which I introduce measurement error in the race measurement and run both types of models outlined above to see if the results show an association between race and social status.</p>
+<p>First, I set up some parameters for the simulation. The boolean variable <code>dvError</code> can be toggled so FALSE to more closely follow the KD&amp;H simulation which only induced error in race at time 1. I have it toggled to TRUE here, but in other runs, I confirm S&amp;P’s finding that when error is only induced in race at time 1, the reported bias is about double what it should be.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#reporting error percent</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>errorProp <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#include errors on DV?</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>dvError <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#number of simulations</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>nSim <span class="ot">&lt;-</span> <span class="dv">1000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Next, I induce the error in each simulation and estimate the key coefficient for each model.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>coefs.basic <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>coefs.fixed <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>tabAA <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>tabDD <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>tabAD <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>tabDA <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nSim) {</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  errorData <span class="ot">&lt;-</span> baseData</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="co">#race.time2</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(dvError) {</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    errors <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(errorData), <span class="fu">round</span>(errorProp<span class="sc">*</span>sampleSize), <span class="at">replace=</span><span class="cn">FALSE</span>)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    temp <span class="ot">&lt;-</span> errorData<span class="sc">$</span>race.time2[errors]</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    temp2 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(errors))</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    temp2[temp<span class="sc">==</span><span class="st">"A"</span>] <span class="ot">&lt;-</span> <span class="st">"D"</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    temp2[temp<span class="sc">==</span><span class="st">"D"</span>] <span class="ot">&lt;-</span> <span class="st">"A"</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    errorData<span class="sc">$</span>race.time2[errors] <span class="ot">&lt;-</span> temp2</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>  <span class="co">#race.time1</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>  errors <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(errorData), <span class="fu">round</span>(errorProp<span class="sc">*</span>sampleSize), <span class="at">replace=</span><span class="cn">FALSE</span>)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>  temp <span class="ot">&lt;-</span> errorData<span class="sc">$</span>race.time1[errors]</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>  temp2 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(errors))</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>  temp2[temp<span class="sc">==</span><span class="st">"A"</span>] <span class="ot">&lt;-</span> <span class="st">"D"</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>  temp2[temp<span class="sc">==</span><span class="st">"D"</span>] <span class="ot">&lt;-</span> <span class="st">"A"</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>  errorData<span class="sc">$</span>race.time1[errors] <span class="ot">&lt;-</span> temp2</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>  <span class="co">#get the mean unemployment by each group of switchers and stayers</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>  tab <span class="ot">&lt;-</span> <span class="fu">tapply</span>(errorData<span class="sc">$</span>unemp.time2, errorData[,<span class="dv">2</span><span class="sc">:</span><span class="dv">1</span>], mean)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>  tabAA <span class="ot">&lt;-</span> <span class="fu">c</span>(tabAA, tab[<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>  tabDD <span class="ot">&lt;-</span> <span class="fu">c</span>(tabDD, tab[<span class="dv">2</span>,<span class="dv">2</span>])</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>  tabAD <span class="ot">&lt;-</span> <span class="fu">c</span>(tabAD, tab[<span class="dv">1</span>,<span class="dv">2</span>])</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>  tabDA <span class="ot">&lt;-</span> <span class="fu">c</span>(tabDA, tab[<span class="dv">2</span>,<span class="dv">1</span>])</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>  model <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="fu">I</span>(race.time2<span class="sc">==</span><span class="st">"D"</span>)<span class="sc">~</span>unemp.time2<span class="sc">+</span><span class="fu">I</span>(race.time1<span class="sc">==</span><span class="st">"D"</span>), <span class="at">data=</span>errorData,</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>               <span class="at">family=</span>binomial)</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>  coefs.basic <span class="ot">&lt;-</span> <span class="fu">c</span>(coefs.basic, model<span class="sc">$</span>coef[<span class="st">"unemp.time2"</span>])</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>  panelData <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="fu">data.frame</span>(<span class="at">race=</span>errorData<span class="sc">$</span>race.time1,</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">unemp=</span>errorData<span class="sc">$</span>unemp.time1,</span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">person=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(errorData),</span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">time=</span><span class="fu">rep</span>(<span class="dv">1</span>, <span class="fu">nrow</span>(errorData))),</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>                       <span class="fu">data.frame</span>(<span class="at">race=</span>errorData<span class="sc">$</span>race.time2,</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">unemp=</span>errorData<span class="sc">$</span>unemp.time2,</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">person=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(errorData),</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">time=</span><span class="fu">rep</span>(<span class="dv">2</span>, <span class="fu">nrow</span>(errorData))))</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>  <span class="co">#clogit in the survival library will fit an FE logit</span></span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>  model <span class="ot">&lt;-</span> <span class="fu">clogit</span>(<span class="fu">I</span>(race<span class="sc">==</span><span class="st">"D"</span>)<span class="sc">~</span>unemp<span class="sc">+</span><span class="fu">strata</span>(<span class="fu">as.factor</span>(person)), <span class="at">data=</span>panelData)</span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>  coefs.fixed <span class="ot">&lt;-</span> <span class="fu">c</span>(coefs.fixed, <span class="fu">coef</span>(model)[<span class="st">"unemp"</span>])</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="the-simulation-results" class="level3">
+<h3 class="anchored" data-anchor-id="the-simulation-results">The simulation results</h3>
+<p>First, lets take a look at the results for the basic regression models with a control for prior racial identification.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(coefs.basic, <span class="at">col=</span><span class="st">"red"</span>,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"effect of unemployment on log odds of identifying as black"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"basic regression bias"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="biasbasic.png" class="img-fluid"></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(coefs.basic)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+## -0.1781  0.2799  0.3959  0.3984  0.5158  1.0430</code></pre>
+<p>There is evidence of substantial bias here as a result of measurement error. I will get more into why this happens below, but first lets look at the results for the fixed effects model.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(coefs.fixed, <span class="at">col=</span><span class="st">"red"</span>,</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"effect of unemployment on log odds of identifying as black"</span>,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"fixed effects bias"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="biasfixed.png" class="img-fluid"></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(coefs.fixed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+## -1.350000 -0.223100  0.000000 -0.003183  0.211900  1.065000</code></pre>
+<p>There is no systematic bias from the measurement error in the fixed effects model, although it does produce some substantial noise in the estimate. So, the fixed effects model seems to be robust to this form of measurement error, while the non-fixed effects model is not.</p>
+</section>
+<section id="what-is-driving-the-bias" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-driving-the-bias">What is driving the bias?</h3>
+<p>By looking at the average unemployment among all four types of people (AA non-switchers, DD non-switchers, AD switchers, and DA switchers), we can get a clue as to the source of the bias.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="fu">c</span>(<span class="fu">mean</span>(tabAA),<span class="fu">mean</span>(tabDA)),<span class="fu">c</span>(<span class="fu">mean</span>(tabAD),<span class="fu">mean</span>(tabDD)))</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(tab) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"D"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tab) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"D"</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>tab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>##           A         D
+## A 0.1000189 0.1087715
+## D 0.1081952 0.2000196</code></pre>
+<p>Because switchers are drawn randomly from the total population, their average unemployment rate will equal the population average in both cases of switching. The average unemployment rate of stayers on the other hand is very close to the group-specific averages (at least when the error rate is small). Thus when you compare AD switchers to AA stayers on the first row, AD switchers will have a higher unemployment rate. Similarly, when comparing DD stayers to DA switchers (the second row), the DA switchers will have a much lower unemployment rate. This is what produces the bias.</p>
+<p>This bias disappears in the fixed-effects model because it only exists in the between-person comparisons (i.e.&nbsp;AA stayers to AD switchers and DD stayers to DA switchers). By definition, fixed-effects models only estimate within-person comparisons. Thus, the fixed-effects model is robust to this kind of bias.</p>
+<p>I should also note that this table helps to illuminate why only inducing errors for race at time 1 inflates the bias significantly. Here is the output of that table when I ran this simulation with <code>dvError</code> set to FALSE.</p>
+<pre><code>##            A         D
+## A 0.10001088 0.1994540
+## D 0.09881213 0.1999546</code></pre>
+<p>Both types of switchers have unemployment rates that are the same as the race-specific unemployment rates of their group at time 2, rather than the population wide average. Therefore, the log odds ratio will just mirror the log-odds ratio in unemployment between the A and D groups, generally.</p>
+</section>
+<section id="what-is-measurement-error" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-measurement-error">What is measurement error?</h3>
+<p>Given the results here, a key question is how big would we expect this measurement error to be and where does it come from? As I noted above, recording and/or transcription errors could clearly be classed as measurement error. I said in my original simulation that we should think of these errors as being produced at random in the data (I referred to this as “MCAR”“, although technically it should be ECAR, I suppose) and that is the way the errors are modeled in the simulation. In Hannon’s <a href="http://andrewgelman.com/2016/06/10/racial-classification-sociology-controversy-update/">response</a> on Gelman’s blog, he says:</p>
+<blockquote class="blockquote">
+<p>I don’t agree with his suggestion that accounting for measurement error in racial fluidity studies means a total focus on missing completely at random because “Anything else gets into the tricky question of what measurement error really means anyway on a variable with no real true response.” I think non-random measurement error matters too in this context.</p>
+</blockquote>
+<p>I was initially very confused by this response. Was Hannon suggesting that changes in the race response that were correlated with other variables (i.e.&nbsp;not completely at random) should be thought of as “non-random measurement error?” That would be odd, considering this is exactly what S&amp;P were trying to measure. It was only after I read the published KD&amp;H comment that I realized they were suggesting something else. KD&amp;H argue that the significant level of race reporting inconsistency over time is “not due to racial fluidity but rather a flawed classification scheme.” (pg. 235) Alba et. al.&nbsp;make a similar point. More specific to the issue of non-random measurement error, KD&amp;H argue in footnote 6 that:</p>
+<blockquote class="blockquote">
+<p>As S&amp;P note, in 1979, respondents chose from a list of 28 ethnicities/nationalities, but in 2002 they chose from only five racial groups and had a separate question about Hispanic ethnicity. This dramatic change in survey questions could obviously introduce significant error in longitudinal social science models. Such error need not be randomly distributed.</p>
+</blockquote>
+<p>It is absolutely true that the survey design will affect the degree of inconsistency in race reporting over time, but to think of this as measurement error is problematic. On a basic level, this kind of process does not correspond to the simulation that KD&amp;H themselves conducted. But on a more fundamental level, its a wrong-headed way to think about the process of racial identification and classification (as well as classification by gender, sexuality, social class, etc.) and reveals a superficial attachment to the notion of socially constructed identities. The disagreement here really gets to the core of the issue where I feel people involved in the debate are talking past each other. We are not measuring someone’s years of education or how many push-ups they did last week, both of which have an objectively true value. We are measuring a concept that all parties agree is socially constructed and subjective. The only measurement error that can logically exist is if when confronted with a set of categories, a person’s intent in that moment <em>relative to those categories</em> is incorrectly recorded. That a person’s response would be different with a different set of categories is not evidence of measurement error. At the risk of a lack of humility, let me quote <a href="http://abs.sagepub.com/content/60/4/498">myself</a> on this topic:</p>
+<blockquote class="blockquote">
+<p>Given this implicit correspondence between race and ancestry, it may be useful to make comparisons between the two responses by treating each response as a subjective assessment of a person’s essentialized identity. The goal is not to judge the accuracy of either report, which would be a quixotic task, but rather to understand the correspondence in reporting on two subjective responses in order to draw better conclusions about processes of identification, the nature of racial boundaries, and even racial inequality.</p>
+</blockquote>
+<p>I was referring in this quote to a comparison between race and ancestry reporting on the Census and ACS, but the basic point applies equally to this situation. What KD&amp;H see as a fundamental problem – that poor survey design induces inconsistency – is actually a virtue. Take the case of Hispanics. Both KD&amp;H and Alba et. al.&nbsp;point out that the high level of inconsistency for Hispanics is driven by the choice set of white/black/other that respondents faced for most waves of the NLSY79. Many Hispanics vacillated between white and other. Their point here is accurate, but is largely irrelevant to the findings of S&amp;P. If declining social status makes Hispanics more likely to choose “other” compared to “white”, then we have learned something. In this sense, the poor survey design can be exploited to draw interesting conclusions. Its not a bug, its a feature.</p>
+</section>
+</section>
+<section id="what-now" class="level2">
+<h2 class="anchored" data-anchor-id="what-now">What now?</h2>
+<p>Given the results of the simulation, one suggestion might be that we move away from the basic regression model approach in future work toward fixed-effects models that are more robust to potential measurement error. This is a suggestion that KD&amp;H also make.</p>
+<p>I think there is also potential for more advanced models here. Both KD&amp;H and Alba et. al.&nbsp;suggest that the model should really only be applied to individuals who are racially ambigious (i.e.&nbsp;that have the potential to be classified in multiple ways). Gelman in his <a href="http://andrewgelman.com/2016/06/07/social-problems-with-a-paper-in-social-problems/">blog post</a> says “For example, I’ll never be counted as “black” no matter how many times I go to jail.” Gelman suggests this might be a source of bias, but I have long thought that S&amp;P are probably underestimating the effect of social status change on racial reporting change, because they are averaging the effects across individuals who vary substantially in their probability to be differently classified. KD&amp;H and Alba et. al.&nbsp;suggest running the models on subsets that are believed to be more racially ambigious (e.g.&nbsp;latinos, multiracial individuals). I think this is an inefficient and overly simplistic approach. I think what we are after here is something like a “treatment on the treated” effect - the effect of switching on those who actually switched, except in this case the switching is the outcome, not the treatment. Some of the innovations in causal modeling on panel data may help provide more clarity in the future.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/your-website-url\.example\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

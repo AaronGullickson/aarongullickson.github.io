@@ -1,16 +1,18 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/posts.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/post/first_github_repo/index.html",
+      "/post/better-contrasts-for-ordinal-variables-in-r/index.html",
+      "/post/adding-odds-ratios-to-logit-model-output-in-r/index.html",
+      "/post/anonymous_code/index.html",
+      "/post/coding_ifelse/index.html",
+      "/post/mcclintock_response/index.html",
+      "/post/adventures_markdown/index.html",
+      "/post/settingupgit/index.html",
+      "/post/reportingerror/index.html",
+      "/post/firstgithubrep/index.html",
+      "/post/statusexchangemodels/index.html"
     ]
   }
 ]

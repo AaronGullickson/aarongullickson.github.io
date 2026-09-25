@@ -7,8 +7,17 @@ website:
   title: "Aaron Gullickson"
   navbar:
     left:
-      - posts.qmd
-  
+      - icon: sticky
+        text: Blog Posts
+        href: posts.qmd
+      - icon: book
+        text: "Statistics Analysis in Sociology"
+        href: https://stat-analysis.netlify.app/
+        target: _blank
+      - icon: book
+        text: "Practical Data Analysis Using R"
+        href: https://practical-data-analysis-r.netlify.app/
+        target: _blank
 format:
   html:
     theme:
