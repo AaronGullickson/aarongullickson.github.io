@@ -43,6 +43,10 @@ format:
     theme:
       - cosmo
       - brand
+    toc: true
+    toc-title: "Navigation"
+    toc-location: right
+    toc-depth: 3
     css: styles.css
 
 
