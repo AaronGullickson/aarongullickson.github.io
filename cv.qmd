@@ -2,6 +2,10 @@
 title: "Curriculum Vitae"
 date-modified: today
 format: html
+# don't freeze or cache or updates will not happen from sheet
+execute:
+  freeze: false
+  cache: false
 ---
 
 ```{r}
