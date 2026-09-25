@@ -2,6 +2,7 @@
 title: Response to McClintock Response
 author: Aaron Gullickson
 date: '2017-08-24'
+description: My attempt to resolve some confusion
 categories:
 - status exchange
 - modeling

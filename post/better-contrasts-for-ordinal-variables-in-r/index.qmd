@@ -2,7 +2,7 @@
 title: Better Contrasts for Ordinal Variables in R
 author: Aaron Gullickson
 date: '2020-09-11'
-subtitle: Use stairstep contrasts, tell a friend
+description: Use stairstep contrasts, tell a friend
 categories:
 - R
 date-modified: '2020-09-11T14:07:36-07:00'

@@ -2,6 +2,7 @@
 title: Adding Odds Ratios to Logit Model Output in R
 author: Aaron Gullickson
 date: '2020-05-06'
+description: Using simple functions for convenience
 categories:
 - R
 date-modified: '2020-05-06T13:49:04-07:00'
