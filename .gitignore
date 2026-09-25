@@ -7,4 +7,5 @@
 /_site/
 **/*.quarto_ipynb
 
+# these are auto-generated when aarongullickson_cv.qmd is rendered
 /pdf-cv/rubrics/*.tex
