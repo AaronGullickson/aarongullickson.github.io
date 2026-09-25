@@ -42,7 +42,7 @@ jobs:
             any::googlesheets4
             any::commonmark
             any::janitor
-            any:stringr
+            any::stringr
 
       - name: Render website
         run: quarto render
