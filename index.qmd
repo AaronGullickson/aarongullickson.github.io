@@ -12,7 +12,7 @@ about:
       target: _blank
     - icon: bluesky
       text: Bluesky
-      href: https://bsky.app/AaronGullickson
+      href: https://bsky.app/profile/aarongullickson.bsky.social
       target: _blank
     - icon: twitter-x
       text: X/Twitter
