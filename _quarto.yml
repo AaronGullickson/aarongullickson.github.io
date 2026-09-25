@@ -30,12 +30,25 @@ website:
         target: _blank
       - section: "Textbooks"
         contents:
-        - text: "Statistics Analysis in Sociology"
-          href: https://stat-analysis.netlify.app/
-          target: _blank
-        - text: "Practical Data Analysis Using R"
-          href: https://practical-data-analysis-r.netlify.app/
-          target: _blank
+          - text: "Statistics Analysis in Sociology"
+            href: https://stat-analysis.netlify.app/
+            target: _blank
+          - text: "Practical Data Analysis Using R"
+            href: https://practical-data-analysis-r.netlify.app/
+            target: _blank
+      - text: My Research Template
+        href: https://github.com/aaronGullickson/research-template
+        target: _blank
+      - section: "Quarto Extensions"
+        contents:
+          - text: "AOG Article"
+            href: https://github.com/AaronGullickson/aog-article-quarto
+            target: _blank
+          - text: "Submittable"
+            href: https://github.com/AaronGullickson/submittable-quarto
+            target: _blank
+          
+       
 
 
 format:
