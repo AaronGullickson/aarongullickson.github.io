@@ -1,5 +1,6 @@
 ---
 title: "Curriculum Vitae"
+date: '2026-09-25'
 format: html
 ---
 
