@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%
+% This CV example/template is based on my own
+% CV which I (lamely attempted) to clean up, so that
+% it's less of an eyesore and easier for others to use.
+%
+% LianTze Lim (liantze@gmail.com)
+% 23 Oct, 2022
+%
+\documentclass[letter,11pt,english]{curve}
+
+\RequirePackage{silence}
+\WarningsOff[longtable]
+\WarningsOff[array]
+
+\RequirePackage{graphicx}
+\RequirePackage[hyphens]{url}
+\RequirePackage{babel}
+\raggedright
+
+\RequirePackage[fixed]{fontawesome5}
+\RequirePackage{academicons}
+
+\newcommand{\smallcaps}[1]{\textsc{\lowercase{#1}}}
+
+\RequirePackage[nohead,nofoot,hmargin=2.25cm,vmargin=2cm]{geometry}
+\RequirePackage{relsize}
+\RequirePackage[dvipsnames,svgnames]{xcolor}
+\RequirePackage{tikz}
+\usetikzlibrary{shapes,shadows}
+
+\RequirePackage{comment}
+\definecolor{SwishLineColour}{HTML}{88AC0B}
+\definecolor{MarkerColour}{HTML}{B6073F}
+
+% If you're not a researcher nor an academic, you probably don't need biblatex; delete this line.
+\RequirePackage{csquotes}
+
+\RequirePackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+   \node[shape=circle,text=white,fill=MarkerColour!80!black,font=\sffamily\scriptsize\bfseries,inner sep=1pt,text height=1.35ex,minimum width=1.5em,text centered] (char) {#1};}}
+
+\RequirePackage{xpatch}
+\xpretofieldformat{doi}
+  {\textcolor{MarkerColour!80!black}{\scriptsize\faLink}}
+  {}{}
+\xpretofieldformat{url}
+  {\textcolor{MarkerColour!80!black}{\scriptsize\faLink}}
+  {}{}
+
+\headerscale{0.7}
+%\setlength{\headerspace}{6pt}
+\rubricfont{\Large\bfseries\sffamily}
+\setlength{\rubricspace}{2pt}
+%\setlength{\rubricafterspace}{-9pt}
+\setlength{\rubricafterspace}{-3pt}
+\setlength{\subrubricspace}{3pt}
+\setlength{\subrubricbeforespace}{4pt}
+\def\@@rubrichead#1{%
+  \begin{tikzpicture}[baseline]%\
+  \shade[left color=SwishLineColour!60!white, right color=white] rectangle (\@almosttextwidth,2.5pt);
+  \node[font={\@rubricfont},inner sep=0pt,text ragged,anchor=south west,text depth=.5ex,text height=1.5ex] at (1pt,2pt) {#1};
+  \end{tikzpicture}%
+  \vspace\rubricspace%
+}
+
+\subrubricfont{\large\bfseries\sffamily}
+\subrubricalignment{l}
+
+% to address subrubric header indentation per:
+% https://tex.stackexchange.com/questions/18543/curve-document-class-alignment-issue-with-subrubrics
+\makeatletter
+\def\@@subrubric#1{%
+\rule{0bp}{\@beforespace}%
+{\@subrubricfont#1}
+\@subrubricmark{#1}}
+\makeatother
+
+\newcommand{\makefield}[2]{\makebox[1.5em]{\color{MarkerColour!80!black}#1} #2\hspace{2em}}
+
+\keyalignment{l}
+\rubricalignment{l}
+\renewcommand{\arraystretch}{1.25}
+\urlstyle{tt}
+
+\newcommand{\prefixmarker}[1]{\def\@prefixmarker{#1}}
+\def\@prefixmarker{\relscale{.9}\faBookmark}
+
+\prefix{%
+  \hspace*{-1ex}
+  % Comment out the next line to get no bookmark on entries
+  \color{MarkerColour!80!black}\@prefixmarker%
+  \hspace*{1ex}%
+}
+
+\newcommand{\makerubrichead}[1]{\vskip\baselineskip\@@rubrichead{#1}}
+
+\RequirePackage{pgffor}
+\newcommand{\mynames}[1]{\def\my@namelist{#1}}
+\newtoggle{boldname}
+
+\RequirePackage[colorlinks=true,allcolors=black,breaklinks=true]{hyperref}
+
+\usepackage{fontspec} 
+%% You can use \setmainfont etc; I'm just using these font packages here because they provide OpenType fonts for use by XeLaTeX/LuaLaTeX anyway
+\usepackage[medium,bold]{cabin}
+\usepackage[varqu,varl,scale=0.9]{zi4}
+
+% Change the page margins if you want
+%\geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+\definecolor{SwishLineColour}{HTML}{$swish-color$}
+\definecolor{MarkerColour}{HTML}{$marker-color$}
+
+%% Photo is only shown if "fullonly" is included
+\includecomment{fullonly}
+% \excludecomment{fullonly}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\leftheader{%
+  {\LARGE\bfseries\sffamily $name$}
+  ~\\
+  
+  
+\begin{tabular}{ll}
+  \makefield{\faEnvelope[regular]}{\href{mailto:$email$}{\texttt{$email$}}} &
+  \makefield{\faOrcid}{\href{https://orcid.org/$orcid$}{\texttt{$orcid$}}}\\
+  \makefield{\faGithub}{\href{https://github.com/$github$}{\texttt{$github$}}} &
+  \makefield{\aiGoogleScholar}{\href{https://scholar.google.com/citations?user=$gscholar$}{\texttt{Google Scholar Citations}}}\\
+  \makefield{\faTwitter}{\href{https://twitter.com/$twitter$}{\texttt{$twitter$}}} &
+  \makefield{\faGlobe}{\url{$url$}}
+\end{tabular}
+}
+
+\rightheader{%
+  Updated \today\\
+  ~\\
+  ~\\
+  ~\\
+  ~\\
+}
+%\begin{fullonly}
+%\photo[r]{photo}
+%\photoscale{0.13}
+%\end{fullonly}
+
+\title{Curriculum Vitae}
+\begin{document}
+\makeheaders[c]
+
+$body$
+
+\end{document}

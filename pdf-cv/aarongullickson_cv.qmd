@@ -1,0 +1,126 @@
+---
+name: Aaron Gullickson
+email: aarong@uoregon.edu
+github: AaronGullickson
+twitter: AaronGullickson
+orcid: 0000-0001-7237-8131
+url: https://aarongullickson.netlify.app/
+gscholar: LCTjizQAAAAJ
+marker-color: 100080
+swish-color: 00D3CC
+format: 
+  pdf:
+    keep-tex: false
+    template: cv-template.tex
+filters:
+   - latex-environment
+execute: 
+  include: false
+commands: [makerubric]
+---
+
+
+```{r}
+#| label: load-libraries
+library(dplyr)
+library(stringr)
+library(glue)
+library(commonmark)
+library(janitor)
+```
+
+```{r}
+#| label: create-functions
+# This function will be applied to all text except for years, to convert
+# any markdown present and to escape any special latex characters.
+convert_markdown <- function(words) {
+  sapply(words, function(word) {
+    str_remove(markdown_latex(word), "\\n$")
+  })
+}
+
+# function for creating entries
+# sections - the sections from the google doc. 
+# subtitles - if this is not null, subrubric headers will be created
+#             for each corresponding section
+create_entries <- function(sections, title, subtitles=NULL) {
+  filename <- paste("rubrics/", make_clean_names(title), ".tex", sep="")
+  cat(paste("\\begin{rubric}{",title,"}\n\n", sep=""), file=filename)
+  for(i in 1:length(sections)) {
+    if(!is.null(subtitles)) {
+      cat(paste("\n\\subrubric{",subtitles[i],"}\n\n", sep=""), file=filename,
+          append=TRUE)
+    }
+    cv_data |>
+      filter(section==sections[i]) |>
+      mutate(when=ifelse(is.na(when), "", when),
+             when=str_replace(when, "-", " -- "),
+             what=convert_markdown(what),
+             where=convert_markdown(where),
+             with=convert_markdown(ifelse(is.na(with), "", 
+                                          paste("(", with, ")", sep=""))),
+             details=convert_markdown(case_when(
+               is.na(description_1) ~ "",
+               is.na(description_2) ~ paste("* ", description_1),
+               is.na(description_3) ~ paste("* ", description_1, "\n",
+                                            "* ", description_2),
+               TRUE ~ paste("* ", description_1, "\n",
+                            "* ", description_2, "\n",
+                            "* ", description_3))
+             )) |>
+      glue_data("\\entry*[<when>] \\textbf{<what>}, <where> <with> <details>", 
+                .open = "<", .close = ">") |>
+      cat(sep="\n", file=filename, append=TRUE)
+  }
+  cat("\n\\end{rubric}", file=filename, append=TRUE)
+}
+```
+
+```{r}
+#| label: load-cv-data
+data_location = "https://docs.google.com/spreadsheets/d/1scjvE65qm5YXS-JG4-CRPiLEqsz6p4y34WX6ipEct_w/edit#gid=917338460"
+googlesheets4::gs4_deauth()
+cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries", 
+                                     skip = 1, col_types = "c")
+```
+
+```{r}
+#| label: create-rubrics
+
+create_entries("employment","Employment")
+create_entries("education","Education")
+create_entries("academic_articles","Publications")
+create_entries("grants_awarded","Grants Awarded")
+create_entries(c("invited_talks","conference_talks"), 
+               "Recent Presentations",
+               c("Invited Talks","Conferences"))
+create_entries("classes_taught", "Courses Taught")
+create_entries(c("diss_advised","comp_advised","master_advised",
+                 "undergrad_advised"), 
+               "Student Advising",
+               c("Disserations Advised","Comprehensive Exams Advised",
+                 "Master's Paper Advised","Undergraduates Advised"))
+create_entries(c("service_department","service_university",
+                 "service_professional"),
+                 "Service",
+                 c("Departmental","University","Professional"))
+```
+
+
+
+[rubrics/employment]{.makerubric}
+
+[rubrics/education]{.makerubric}
+
+[rubrics/publications]{.makerubric}
+
+[rubrics/grants_awarded]{.makerubric}
+
+[rubrics/recent_presentations]{.makerubric}
+
+[rubrics/courses_taught]{.makerubric}
+
+[rubrics/student_advising]{.makerubric}
+
+[rubrics/service]{.makerubric}
+

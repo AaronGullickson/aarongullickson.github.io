@@ -1,0 +1,1 @@
+This directory contains the auto-generated rubric *.tex documents.
