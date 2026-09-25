@@ -10,6 +10,7 @@ website:
       - icon: sticky
         text: Blog Posts
         href: posts.qmd
+      - cv.qmd
       - icon: book
         text: "Statistics Analysis in Sociology"
         href: https://stat-analysis.netlify.app/

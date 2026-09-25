@@ -1,0 +1,202 @@
+---
+title: "Curriculum Vitae"
+format: html
+---
+
+```{r}
+#| label: setup
+#| include: false
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
+                      message = FALSE)
+library(tibble)
+library(dplyr)
+library(magrittr)
+library(glue)
+```
+
+
+```{r} 
+#| label: functions
+#| include: false
+print_section <- function(section_name,  separate_line=FALSE) {
+  section <- cv_data %>% 
+    filter(section==section_name) %>% 
+    mutate(with=ifelse(is.na(with), "", paste("(",with,")",sep="")),
+           when=ifelse(is.na(when), "", paste("`",when,"`",sep="")),
+           description_1=ifelse(is.na(description_1), "", 
+                                paste("- ",description_1,sep="")),
+           description_2=ifelse(is.na(description_2), "", 
+                                paste("- ",description_2,sep="")),
+           description_3=ifelse(is.na(description_3), "", 
+                                paste("- ",description_3,sep="")),
+           description=description_1,
+           description=ifelse(description_2=="", description,
+                              paste(description, description_2, sep="\n")),
+           description=ifelse(description_3=="", description,
+                              paste(description, description_3, sep="\n")),
+           description=ifelse(description=="", "  ",
+                              paste("\n\n",description,"\n\n",sep="")))  
+  
+  if(separate_line) {
+    section %>%
+      glue_data("{when} **{what}**  
+                {where}  {with}  ")
+  } else {
+    section %>%
+      glue_data("{when} **{what}**, {where}  {with} {description}")
+  }
+}
+```
+
+```{r} 
+#| label: read-data
+#| include: false
+
+data_location = "https://docs.google.com/spreadsheets/d/1scjvE65qm5YXS-JG4-CRPiLEqsz6p4y34WX6ipEct_w/edit#gid=917338460"
+googlesheets4::gs4_deauth() 
+cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries", 
+                                     skip = 1, col_types = "c")
+```
+
+
+[Download as PDF](aarongullickson_cv.pdf)
+
+::: {.cv}
+
+## Employment
+
+```{r}
+#| label: employment
+#| results: asis
+
+print_section("employment", separate_line = FALSE)
+```
+
+## Education
+
+```{r}
+#| label: education
+#| results: asis
+
+print_section("education", separate_line = FALSE)
+```
+
+## Publications
+
+```{r}
+#| label: publication
+#| results: asis
+
+print_section("academic_articles")
+```
+
+## Grants Awarded
+
+```{r}
+#| label: grants
+#| results: asis
+
+print_section("grants_awarded", separate_line = FALSE)
+```
+
+## Recent Presentations
+
+### Invited Talks
+
+```{r}
+#| label: invited
+#| results: asis
+
+print_section("invited_talks")
+```
+
+### Conferences
+
+```{r}
+#| label: conferences
+#| results: asis
+
+print_section("conference_talks")
+```
+
+## Courses Taught
+
+```{r}
+#| label: courses
+#| results: asis
+
+print_section("classes_taught")
+#cv_data %>% 
+#  filter(section=="classes_taught") %>%
+#  glue_data("**{what}**, {where}  ")
+```
+
+## Student Advising
+
+### Dissertations Advised
+
+```{r}
+#| label: diss-advised
+#| results: asis
+
+print_section("diss_advised")
+```
+
+### Comprehensive Exams Advised
+
+```{r}
+#| label: comp-advised
+#| results: asis
+
+print_section("comp_advised")
+```
+
+### Master's Papers Advised
+
+```{r}
+#| label: master-advised
+#| results: asis
+
+print_section("master_advised")
+```
+
+### Undergraduates Advised
+
+```{r}
+#| label: undergrad-advised
+#| results: asis
+
+print_section("undergrad_advised")
+```
+
+## Service
+
+### Departmental
+
+```{r}
+#| label: service-dept
+#| results: asis
+
+print_section("service_department")
+```
+
+### University
+
+```{r}
+#| label: service-univ
+#| results: asis
+
+print_section("service_university")
+```
+
+### Professional
+
+```{r}
+#| label: service-prof
+#| results: asis
+
+print_section("service_professional")
+
+```
+
+:::
