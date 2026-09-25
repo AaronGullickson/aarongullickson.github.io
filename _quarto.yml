@@ -5,37 +5,38 @@ website:
   description: "Aaron Gullickson's Website"
   site-url: https://aarongullickson.github.io
   title: "Aaron Gullickson"
-  navbar:
-    left:
-      - text: Blog Posts
-        href: posts.qmd
-      - cv.qmd
-      - icon: book
-        text: "Statistics Analysis in Sociology"
-        href: https://stat-analysis.netlify.app/
-        target: _blank
-      - icon: book
-        text: "Practical Data Analysis Using R"
-        href: https://practical-data-analysis-r.netlify.app/
-        target: _blank
+  # navbar:
+  #   left:
+  #     - text: Blog Posts
+  #       href: posts.qmd
+  #     - cv.qmd
+  #     - icon: book
+  #       text: "Statistics Analysis in Sociology"
+  #       href: https://stat-analysis.netlify.app/
+  #       target: _blank
+  #     - icon: book
+  #       text: "Practical Data Analysis Using R"
+  #       href: https://practical-data-analysis-r.netlify.app/
+  #       target: _blank
         
-#  sidebar:
-#    style: "floating"
-#    search: true
-#    contents:
-      # - icon: sticky
-      #   text: Blog Posts
-      #   href: posts.qmd
-      # - section: "Textbooks"
-      #   contents:
-      #   - icon: book
-      #     text: "Statistics Analysis in Sociology"
-      #     href: https://stat-analysis.netlify.app/
-      #     target: _blank
-      #   - icon: book
-      #     text: "Practical Data Analysis Using R"
-      #     href: https://practical-data-analysis-r.netlify.app/
-      #     target: _blank
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - posts.qmd
+      - cv.qmd
+      - text: Replication Packages
+        href: https://github.com/AaronGullickson?tab=repositories&q=topic%3Areplication-package+&type=&language=&sort=
+        target: _blank
+      - section: "Textbooks"
+        contents:
+        - text: "Statistics Analysis in Sociology"
+          href: https://stat-analysis.netlify.app/
+          target: _blank
+        - text: "Practical Data Analysis Using R"
+          href: https://practical-data-analysis-r.netlify.app/
+          target: _blank
+
 
 format:
   html:
@@ -43,10 +44,12 @@ format:
       light: flatly
       dark: superhero
     toc: true
-    toc-title: "Navigation"
+    toc-title: "Table of Contents"
     toc-location: right
     toc-depth: 3
     css: styles.css
+    grid:
+      sidebar-width: 300px
 
 
 

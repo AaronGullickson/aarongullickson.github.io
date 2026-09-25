@@ -2,8 +2,8 @@
 title: ""
 image: headshot.png
 about:
-  template: trestles
-  #image-width: 5em
+  template: solana
+  image-width: 15em
   image-shape: round
   links:
     - icon: github
