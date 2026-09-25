@@ -1,6 +1,7 @@
 ---
 title: ""
 image: headshot.png
+toc: false
 about:
   template: solana
   image-width: 15em
