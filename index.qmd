@@ -4,7 +4,7 @@ image: headshot.png
 about:
   template: trestles
   #image-width: 5em
-  #image-shape: round
+  image-shape: round
   links:
     - icon: github
       text: GitHub
