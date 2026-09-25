@@ -22,6 +22,18 @@ strong a {
     font-weight: inherit;
 }
 
+/* remove centering of text on small displays */
+@media (max-width: 991.98px) {
+  .about-contents, .about-entity, .about-sep {
+    text-align: left !important;
+  }
+  /* If bullet points or lists remain centered or misaligned */
+  .about-contents ul, .about-contents ol {
+    text-align: left !important;
+    display: inline-block;
+  }
+}
+
 /* CV-related */
 
 .cv p {
