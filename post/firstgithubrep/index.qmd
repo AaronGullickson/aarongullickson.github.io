@@ -7,7 +7,7 @@ categories:
 - git
 - open science
 - ancestry
-description: in which I become and open scientist
+description: in which I become an open scientist
 date-modified: '2016-08-16T11:17:18-07:00'
 engine: markdown
 ---
